@@ -1,0 +1,364 @@
+* {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+
+nav {
+    font-size: 80%;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: floralwhite;
+    background-color: #0033A0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0%;
+    z-index: 1;
+
+}
+
+section {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    padding: 5%;
+}
+
+article {
+    padding-top: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 2%;
+}
+
+h1 {
+    display: grid;
+    grid-column: 1/-1;
+    text-align: center;
+    padding-top: 5%;
+    font-size: 130%;
+    text-transform: uppercase;
+
+}
+
+h1.other {
+    padding-top: 0%;
+}
+
+h2 {
+    font-size: 110%;
+
+}
+
+p {
+    font-size: 80%;
+
+}
+
+p.soldOut,
+p.modal-soldOut {
+    color: darkred;
+
+}
+
+p.vegetarian,
+p.modal-vegetarian {
+    color: green;
+
+}
+
+p.alcohol {
+    color: grey;
+}
+
+h3 {
+    font-size: 90%;
+
+}
+
+h3.oldPrice,
+h3.modal-oldPrice {
+    text-decoration: line-through;
+    color: grey;
+}
+
+button {
+
+    border: 0.02px solid;
+    background-color: white;
+    cursor: pointer;
+}
+
+a:hover,
+button:hover {
+    opacity: 0.7;
+}
+
+img {
+    width: 100%;
+}
+
+img.front {
+    padding-top: 10%;
+}
+
+img.side {
+    display: none;
+}
+
+img.sold {
+    opacity: 0.5;
+    z-index: -1;
+}
+
+footer {
+    text-align: center;
+    font-size: 80%;
+    position:relative;
+    bottom: 0%;
+    width: 100%;
+    background-color:blanchedalmond;
+    padding: 1%;
+
+}
+
+.hide {
+    display: none;
+}
+
+.modal-content {
+    background-color: white;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+    padding-top: 0%;
+    padding-bottom: 5%;
+
+}
+
+.middle {
+
+    padding-right: 10%;
+    padding-left: 10%;
+    z-index: 1;
+
+}
+
+.modal-allergens,
+.modal-region {
+    color: dimgrey;
+    font-size: 80%;
+}
+
+.modal-button {
+    position: fixed;
+    right: 0.1%;
+    top: 0.1%;
+    border: none;
+    font-size: 150%;
+    cursor: pointer;
+    background: none;
+    z-index: 1;
+
+}
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+
+
+}
+
+.modal-image {
+    max-width: 80%;
+    padding-left: 10%;
+    padding-top: 10%;
+
+}
+
+.hide {
+    display: none;
+}
+
+@media (min-width: 400px) {
+    nav.small {
+        font-size: 100%;
+    }
+
+    h1 {
+        font-size: 150%;
+    }
+
+    h2 {
+        font-size: 120%;
+    }
+
+    h3 {
+        font-size: 120%;
+    }
+
+    p {
+        font-size: 100%;
+    }
+
+    button.details {
+        font-size: 90%;
+    }
+
+
+}
+
+
+
+@media (min-width: 600px) {
+    nav {
+        font-size: 120%;
+    }
+
+    h1 {
+        font-size: 170%;
+    }
+
+    h2 {
+        font-size: 140%;
+    }
+
+    h3 {
+        font-size: 140%;
+    }
+
+    p {
+        font-size: 100%;
+    }
+
+    button.details {
+        font-size: 110%;
+    }
+
+
+
+    .modal-content {
+        width: 40%;
+    }
+}
+
+@media (min-width: 800px) {
+    img.front {
+        width: 80%;
+        padding-left: 10%;
+    }
+
+
+}
+
+@media (min-width: 1025px) {
+    a {
+        padding: 2%;
+    }
+
+    h1 {
+        padding-top: 7%;
+    }
+
+
+    img.side {
+        display: block;
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: auto;
+        left: 0%;
+        z-index: -1;
+    }
+
+    body {
+        padding-top: 5%;
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-areas: "header-area section-area"
+
+    }
+
+    header {
+        grid-area: header-area;
+    }
+
+    section {
+        grid-area: section-area;
+        grid-gap: 2em;
+
+    }
+
+    footer {
+        grid-column: 1/-1;
+    }
+
+
+        .modal-image {
+            max-width: 60%;
+            padding-right: 20%;
+            padding-left: 20%;
+
+        }
+
+
+}
+
+
+@media (min-width: 1100px) {
+    body {
+
+        grid-template-columns: 1fr 2fr;
+    }
+
+    @media (min-width: 1200px) {
+        body {
+
+            grid-template-columns: 1fr 2.3fr;
+        }
+ .modal-content {
+            width: 30%;
+        }
+
+    }
+
+    @media (min-width: 1300px) {
+        body {
+
+            grid-template-columns: 1fr 2.5fr;
+        }
+
+    }
+
+    @media (min-width: 1400px) {
+        body {
+
+            grid-template-columns: 1fr 2.7fr;
+        }
+
+
+    }
+
+    @media (min-width: 1500px) {
+        body {
+
+            grid-template-columns: 1fr 2.9fr;
+        }
+    }
